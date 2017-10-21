@@ -85,6 +85,10 @@ div.menu_top
 	/*min-height:150px; */
     background-color: rgba(0,0,0,0.5);	
 }
+.cadre_contenu .image-widget {
+	margin: auto;
+	display: inline-block;
+}
 .eqLogic-widget{
 	margin: 1%;
 	border:1px rgba(200,200,200) dashed;
