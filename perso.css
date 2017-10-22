@@ -51,6 +51,10 @@ div.menu_top
 	background-color: rgba(0,0,0,0.2);
 	max-height:70px;
 }
+#menu .selected
+{
+	background-color: rgba(255,255,255,0.2);
+}
 .cadre_marges{
 	padding-top: 1%;
 	padding-left: 1%;
