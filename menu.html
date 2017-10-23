@@ -13,9 +13,14 @@ la class "selected" permet de mettre en surbrillance le bouton du menu sur leque
 
 -->
 
+    
+ <LINK href="montheme/clock.css?2017102201" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="montheme/clock.js?2017102201"></script>
 
 <LINK href="montheme/perso.css?2017102201" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="montheme/scripts.js?2017102201"></script>
+
+
 
 
 <div class="menu_top center" id="menu">
@@ -43,6 +48,11 @@ la class "selected" permet de mettre en surbrillance le bouton du menu sur leque
 	<div class="col-xs-1 monmenu" >
 	<a onClick="planHeader_id=ID DU PLAN; displayPlan();"><img class="img-responsive" src="montheme/images/icon_plan.png">  </a>
 	</div>
-	<div class="col-xs-4 " ></div>
+	<div class="col-xs-4 hidden-xs" >
+      <div class="clock" id="clock">
+        <div class="date"></div>
+        <div class="time"></div>
+   	  </div>
+	</div>
 	
 </div>
