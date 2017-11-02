@@ -19,12 +19,6 @@ $(document).ready(function() {
 		//Move the menu in the pageContainer
         $("#div_pageContainer").prepend($("#menu"));
 
-       $("#div_mainContainer").css({
-            'background-image': 'url("' + urlImg + '")',
-            'background-size': 'cover ',
-            'background-attachment': 'fixed '
-
-        });
 
         fullScreen(true);
 
@@ -102,6 +96,17 @@ $(document).ready(function() {
             'height': ($(window).height() - $("#menu").outerHeight() ) + 'px'
         });
 
+		$("body").css({
+			'padding-top' : '0px',
+        });
+	
+		$( 'body' ).each(function () {
+			this.style.setProperty( 'background-image', 'url(' + urlImg + ')', 'important' );
+			this.style.setProperty( 'background-size', 'cover', 'important' );
+			this.style.setProperty( 'background-attachment', 'fixed', 'important' );
+		});
+
+
 
 		CenterRow();
 
@@ -110,6 +115,8 @@ $(document).ready(function() {
     }, 000);
 
 	$(window).resize(function () {
+
+	
         $(".div_displayObject").css({
             'height': ($(window).height() - $("#menu").outerHeight() ) + 'px'
         });	
@@ -122,6 +129,12 @@ $(document).ready(function() {
 });
 
 function CenterRow(){
+	
+
+		$("#div_mainContainer").css({
+            'margin-top' : $("#menu").outerHeight() + 'px'
+        });		
+		
         //Padding automatique pour centrage des div si ecran plus haut que le total des div
         var containHeight = 0;
         var containPaddingTop = 0;
