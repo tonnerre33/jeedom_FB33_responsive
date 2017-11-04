@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+
+
+ 
+ 
 		var imgBackground = $(".container-fluid img[src*='core/img/plan/']");
 		if(typeof(imgBackground.attr("src")) != "undefined"){
 			imgBackground.remove();
@@ -106,8 +110,10 @@ $(document).ready(function() {
 			this.style.setProperty( 'background-attachment', 'fixed', 'important' );
 		});
 
-
-
+		$(".mCustomScrollbar").mCustomScrollbar();
+ 
+				
+				
 		CenterRow();
 
         $("#jqueryLoadingDiv").hide();

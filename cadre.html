@@ -2,6 +2,7 @@
 - Copiez les images dans montheme/images- Dans le mode Design, ajoutez "Texte/html" puis copier/coller le code html
 - ajoutez le numéro data-plan-list_id a chaque cadre principal en séparant par | si il y en a plusieurs
 -- exemple : data-plan-list_id="39|43" (pour connaitre la valeur du data-plan-list_id, passez en mode édition, ajoutez un élément et cliquez dessus, un fenetre s'ouvrira avec le numéro
+- Si vous souhaitez avoir deux colonnes côte à côte de même hauteur, sur la div de contenu, ajouter la classe "mCustomScrollbar" et fixez une hauteur en ajoutant sylte="height:<hauteur>px"
 -->
 <div class="row">
    <div class="col-xs-12 col-sm-6 cadre_marges">
@@ -11,8 +12,8 @@
          <div class="cadre_imagette"><img src="montheme/images/icon_camera.png" height=30px width=30px></div>
          <!-- TITRE -->
          <div align=center class="cadre_titre">METEO</div>
-         <!-- CONTENU -->
-         <div class="cadre_contenu" data-plan-list_id="40" ></div>
+		 <!-- CONTENU hauteur fixe avec scrollbar verticale -->
+         <div class="cadre_contenu mCustomScrollbar" data-plan-list_id="40" style="height:170px" ></div>
       </div>
    </div>
    <div class="col-xs-12 col-sm-6 cadre_marges">
@@ -22,8 +23,8 @@
          <div class="cadre_imagette"><img src="montheme/images/icon_camera.png" height=30px width=30px></div>
          <!-- TITRE -->
          <div align=center class="cadre_titre">ARROSAGE</div>
-         <!-- CONTENU -->
-         <div  class="cadre_contenu" data-plan-list_id="34|35" ></div>
+		 <!-- CONTENU hauteur fixe avec scrollbar verticale -->
+         <div  class="cadre_contenu mCustomScrollbar" data-plan-list_id="34|35" style="height:170px" ></div>
       </div>
    </div>
 </div>
