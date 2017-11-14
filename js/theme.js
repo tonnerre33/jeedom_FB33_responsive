@@ -69,10 +69,10 @@ $(document).ready(function() {
         //Test if not in edit mode
         if (!$("[data-plan_id]").hasClass("widget-shadow-edit")) {
 
-            $(".cadre_marges").each(function() {
+            $("[data-plan-list_id]").each(function() {
 
 
-                var div_data_plan_list_id = $(this).find("[data-plan-list_id]");
+                var div_data_plan_list_id = $(this);
                 if (typeof div_data_plan_list_id.attr("data-plan-list_id") !== "undefined") {
                     planId_list = div_data_plan_list_id.attr("data-plan-list_id").split('|');
                     for (i = 0; i < planId_list.length; i++) {
