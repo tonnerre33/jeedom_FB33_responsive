@@ -2,25 +2,24 @@ $(document).ready(function() {
 
 
 
- 
- 
-		var imgBackground = $(".container-fluid img[src*='core/img/plan/']");
-		if(typeof(imgBackground.attr("src")) != "undefined"){
-			imgBackground.remove();
-			var urlImg = imgBackground.attr("src");
-		}else{
-			alert("commencez par envoyer une image d'arriere plan");
-		}
+
+    var imgBackground = $(".container-fluid img[src*='core/img/plan/']");
+    if (typeof(imgBackground.attr("src")) != "undefined") {
+        imgBackground.remove();
+        var urlImg = imgBackground.attr("src");
+    } else {
+        alert("commencez par envoyer une image d'arriere plan");
+    }
 
     $("#jqueryLoadingDiv").show();
 
 
     setTimeout(function() {
 
-		//Remove old menu if displayPlan() used
-		$("#div_pageContainer").children(".menu_top:eq(0)").remove();
+        //Remove old menu if displayPlan() used
+        $("#div_pageContainer").children(".menu_top:eq(0)").remove();
 
-		//Move the menu in the pageContainer
+        //Move the menu in the pageContainer
         $("#div_pageContainer").prepend($("#menu"));
 
 
@@ -97,63 +96,65 @@ $(document).ready(function() {
         $("meta[name=viewport]").attr("content", "width=device-width, initial-scale=1.0, maximum-scale=1");
         $(".div_displayObject").css({
             'width': 'auto',
-            'height': ($(window).height() - $("#menu").outerHeight() ) + 'px'
+            'height': ($(window).height() - $("#menu").outerHeight()) + 'px'
         });
 
-		$("body").css({
-			'padding-top' : '0px',
+        $("body").css({
+            'padding-top': '0px',
         });
-	
-		$( 'body' ).each(function () {
-			this.style.setProperty( 'background-image', 'url(' + urlImg + ')', 'important' );
-			this.style.setProperty( 'background-size', 'cover', 'important' );
-			this.style.setProperty( 'background-attachment', 'fixed', 'important' );
-		});
 
-		$(".mCustomScrollbar").mCustomScrollbar();
- 
-				
-				
-		CenterRow();
+        $('body').each(function() {
+            this.style.setProperty('background-image', 'url(' + urlImg + ')', 'important');
+            this.style.setProperty('background-size', 'cover', 'important');
+            this.style.setProperty('background-attachment', 'fixed', 'important');
+        });
+
+        $(".mCustomScrollbar").mCustomScrollbar();
+
+
+
+        CenterRow();
 
         $("#jqueryLoadingDiv").hide();
 
     }, 000);
 
-	$(window).resize(function () {
+    $(window).resize(function() {
 
-	
+
         $(".div_displayObject").css({
-            'height': ($(window).height() - $("#menu").outerHeight() ) + 'px'
-        });	
-		CenterRow();
+            'height': ($(window).height() - $("#menu").outerHeight()) + 'px'
+        });
+        CenterRow();
 
-	});
-	
-	
+    });
+
+
 
 });
 
-function CenterRow(){
-	
+function CenterRow() {
 
-		$("#div_mainContainer").css({
-            'margin-top' : $("#menu").outerHeight() + 'px'
-        });		
-		
-        //Padding automatique pour centrage des div si ecran plus haut que le total des div
-        var containHeight = 0;
-        var containPaddingTop = 0;
-        var windowHeight = $(window).height();
-        var nbRow = 0;
-        $(".div_displayObject").children(".row").each(function() {
-            containHeight += $(this).innerHeight();
-            containPaddingTop = parseInt($(this).children(".cadre_marges").css("padding-top"));
-            nbRow += 1;
-        });
-		var newPadding = (windowHeight - ($("#menu").innerHeight() - (nbRow * containPaddingTop) + containHeight)) / (nbRow + 1); 
-		if(newPadding < 10) { newPadding = 10; }
-            $(".div_displayObject").children(".row").children(".cadre_marges").css("padding-top", newPadding  + 'px');
-        //Fin padding auto
-	
+
+    $("#div_mainContainer").css({
+        'margin-top': $("#menu").outerHeight() + 'px'
+    });
+
+    //Padding automatique pour centrage des div si ecran plus haut que le total des div
+    var containHeight = 0;
+    var containPaddingTop = 0;
+    var windowHeight = $(window).height();
+    var nbRow = 0;
+    $(".div_displayObject").children(".row").each(function() {
+        containHeight += $(this).innerHeight();
+        containPaddingTop = parseInt($(this).children(".cadre_marges").css("padding-top"));
+        nbRow += 1;
+    });
+    var newPadding = (windowHeight - ($("#menu").innerHeight() - (nbRow * containPaddingTop) + containHeight)) / (nbRow + 1);
+    if (newPadding < 10) {
+        newPadding = 10;
+    }
+    $(".div_displayObject").children(".row").children(".cadre_marges").css("padding-top", newPadding + 'px');
+    //Fin padding auto
+
 }
