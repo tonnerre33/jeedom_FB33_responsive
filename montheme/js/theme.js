@@ -17,7 +17,7 @@ $(document).ready(function() {
     setTimeout(function() {
 
         //Remove old menu if displayPlan() used
-        $("#div_pageContainer").children(".menu_top:eq(0)").remove();
+        $("#div_pageContainer").children("#menu:eq(0)").remove();
 
         //Move the menu in the pageContainer
         $("#div_pageContainer").prepend($("#menu"));
