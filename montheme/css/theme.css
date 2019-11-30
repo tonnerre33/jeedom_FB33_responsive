@@ -9,6 +9,9 @@ body {
     margin: auto;
     opacity: 0.8;
 }
+#menu .selected a img {
+	opacity: 1;
+}
 #menu .center {
     text-align: center;
 }
@@ -17,38 +20,60 @@ body {
     margin: auto;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    border-bottom: 2px solid rgba(0, 0, 0, 1);
+}
+#menu .fix{
+	margin-bottom: 0px;
+}
+/*
+#menu .fix:hover{
+	background-color: inherit !important;
 }
 #menu .monmenu:hover {
     background-color: rgba(255, 255, 255, 0.2);
-}
+}*/
 #menu .monmenu {
     margin-left: 0px;
+	margin-bottom: 0px;
     text-align: center;
     padding: 0.5% 0px 0.5% 0px;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-right: 1px solid rgba(255, 255, 255, 0.3);
     background-color: rgba(0, 0, 0, 0.2);
     max-height: 70px;
+	font-size: 1px;
+	min-height: 40px;
+	min-width: 40px;
+
 }
 #menu .selected {
-    background-color: rgba(255, 255, 255, 0.2);
+/*background-color: rgba(255, 255, 255, 0.2);*/
+}
+/* color: rgba(118,161,1,1);*/
+
+.ui-dialog {
+	z-index: 2000;
 }
 .cadre_marges {
-    padding-top: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-top: 1% ;
     padding-bottom: 0px;
+	padding-left : 1% !important;
+	padding-right : 0px !important;
 }
 .cadre_principal {
     box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.5);
 }
 .cadre_imagette {
     position: absolute;
-    margin-top: 6px;
+    margin-top: 2px;
     margin-left: 5px;
     opacity: 0.8;
     max-width: 100%;
+}
+.cadre_imagette  {
+    height: 30px;
+    width: 30px;
+	font-size: 30px;
+	color: white;
 }
 .cadre_imagette img {
     height: 30px;
@@ -61,24 +86,44 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
     padding-top: 10px;
     font-family: Arial;
-    font-weight: normal;
+    font-weight: bold;
 }
 .cadre_contenu {
-    text-align: center;
+	position : relative;
+  /*  text-align: center;*/
     /*min-height:150px; */
     
     background-color: rgba(0, 0, 0, 0.5);
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	padding: 2px;
+	vertical-align: middle;
 }
 .cadre_contenu .image-widget {
     margin: auto;
-    display: inline-block;
 }
-.eqLogic-widget {
-    margin: 1%;
-    border: 1px rgba(200, 200, 200) dashed;
+.eqLogic-widget, .image-widget  {
+    /*border: 1px rgba(200, 200, 200) dashed*/
     border-radius: 0px;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+}
+.div_displayObject .eqLogic-widget{
+	position: relative;
 }
 .row {
-    margin-left: 1%;
-    margin-right: 1%;
+    margin-left: 0px !important;
+    margin-right: 1% !important;
+}
+
+/*Couleurs personnalisée*/
+.highcharts-color-0 {
+	fill: rgba(105,143,1,1);
+
+}
+/* taille personnalisée pour widget*/
+.summary-widget {
+	width: 100%
 }

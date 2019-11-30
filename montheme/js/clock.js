@@ -38,11 +38,9 @@ $(document).ready(function() {
               var date = new Date();
 
               var nowUTC = date.getTime() + date.getTimezoneOffset()*60*1000;
-
-              // alert( nowUTC +' vs. '+ date.getTime() );
-
+	
               // Zeitverschiebung addieren/subtrahieren: X STD * 60 Min. * 60 Sek. * 1000 Millisek.
-              date.setTime( nowUTC + (utc_offset*60*60*1000) );
+              //date.setTime( nowUTC + (utc_offset*60*60*1000) );
 
               var hour = date.getHours();
 
