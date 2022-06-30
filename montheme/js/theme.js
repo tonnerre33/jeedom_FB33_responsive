@@ -2,10 +2,15 @@ $(function() {
 
 
 
-    var imgBackground = $(".container-fluid img[src*='data/plan/']");
-    if (typeof(imgBackground.attr("src")) != "undefined") {
+    var imgBackground = $(".div_backgroundPlan div").filter(function(){
+        return this.style.background.indexOf('data/plan/planHeader') != -1;
+    });
+
+
+
+    if (typeof(imgBackground) != "undefined") {
+        var urlImg = imgBackground.css('background').split(" ")[4].replace(/^url\(['"](.+)['"]\)/, '$1');
         imgBackground.remove();
-        var urlImg = imgBackground.attr("src");
     } else {
         alert("commencez par envoyer une image d'arriere plan");
     }
@@ -13,8 +18,8 @@ $(function() {
     $("#jqueryLoadingDiv").show();
 
 
-    $("head").append('<LINK href="montheme/css/theme.css?v=2019122304" rel="stylesheet" type="text/css">' +
-        '<LINK href="http://fonts.googleapis.com/css?family=Ubuntu:300,400" rel="stylesheet" type="text/css" />' +
+    $("head").append('<LINK href="montheme/css/theme.css?v=2022063001" rel="stylesheet" type="text/css">' +
+        '<LINK href="https://fonts.googleapis.com/css?family=Ubuntu:300,400" rel="stylesheet" type="text/css" />' +
         '<LINK href="montheme/css/clock.css?v=2017110501" rel="stylesheet" type="text/css">' +
         '<script type="text/javascript" src="montheme/js/clock.js?v=2017110501"></script>' +
         '<LINK href="montheme/3rdparty/malihu-custom-scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css">' +
