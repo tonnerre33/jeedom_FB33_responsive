@@ -13,12 +13,13 @@ $(function() {
     $("#jqueryLoadingDiv").show();
 
 
-    $("head").append('<LINK href="montheme/css/theme.css?v=2019110301" rel="stylesheet" type="text/css">' +
+    $("head").append('<LINK href="montheme/css/theme.css?v=2019122304" rel="stylesheet" type="text/css">' +
         '<LINK href="http://fonts.googleapis.com/css?family=Ubuntu:300,400" rel="stylesheet" type="text/css" />' +
         '<LINK href="montheme/css/clock.css?v=2017110501" rel="stylesheet" type="text/css">' +
         '<script type="text/javascript" src="montheme/js/clock.js?v=2017110501"></script>' +
         '<LINK href="montheme/3rdparty/malihu-custom-scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css">' +
-        '<script type="text/javascript" src="montheme/3rdparty/malihu-custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>');
+        '<script type="text/javascript" src="montheme/3rdparty/malihu-custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>' +
+		'<meta name="theme-color" content="black">');
 
 
     $.get("montheme/menu.html", function(data) {
